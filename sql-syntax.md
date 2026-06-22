@@ -1,6 +1,6 @@
 # SQL Syntax:
 
-### MySQL Datatype.
+## MySQL Datatype
 
 | Data Type      | Purpose                        | Example                  |
 | -------------- | ------------------------------ | ------------------------ |
@@ -13,7 +13,7 @@
 | `BOOLEAN`      | Stores True/False values       | `1`, `0`                 |
 | `TEXT`         | Stores long text               | Paragraphs, descriptions |
 
-### MySQL Constraints.
+## MySQL Constraints
 
 | Constraint       | Purpose                                       |
 | ---------------- | --------------------------------------------- |
