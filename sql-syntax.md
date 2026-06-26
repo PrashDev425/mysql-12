@@ -1,6 +1,6 @@
 # SQL Syntax:
 
-## MySQL Datatype
+## MySQL Datatypes
 
 | Data Type      | Purpose                        | Example                  |
 | -------------- | ------------------------------ | ------------------------ |
@@ -20,12 +20,13 @@
 | `NOT NULL`       | Column cannot have a NULL value               |
 | `UNIQUE`         | All values in the column must be different    |
 | `PRIMARY KEY`    | Uniquely identifies each record               |
-| `FOREIGN KEY`    | Links a column to another table's primary key |
 | `CHECK`          | Ensures values satisfy a condition            |
 | `DEFAULT`        | Provides a default value if none is specified |
 | `AUTO_INCREMENT` | Automatically generates sequential numbers    |
 
-## Creating Database:
+## DDL (Data Definition Language)
+
+### Creating Database:
 
 **Syntax:**
 
@@ -33,7 +34,7 @@
 CREATE DATABASE database_name;
 ```
 
-## Creating Table:
+### Creating Table:
 
 **Syntax:**
 
@@ -46,36 +47,7 @@ CREATE TABLE table_name (
 );
 ```
 
-## Query
-
-**Syntax:**
-
-```sql
-SELECT column1, column2, aggregate_function(...)
-FROM table1
-WHERE condition
-GROUP BY column
-HAVING condition
-ORDER BY column [ASC | DESC]
-LIMIT number OFFSET number;
-```
-**Clause Breakdown:**
-
-- ``SELECT`` → Choose which columns (or expressions) to display.
-
-- ``FROM`` → Table(s) from which data is retrieved.
-
-- ``WHERE`` → Filter rows before grouping/aggregation.
-
-- ``GROUP BY`` → Group rows (used with aggregate functions like COUNT, SUM, AVG).
-
-- ``HAVING`` → Filter groups (applied after GROUP BY).
-
-- ``ORDER BY`` → Sort the results.
-
-- ``LIMIT / OFFSET`` → Limit number of rows returned (pagination).
-
-## Table Management Command 
+### Table Management Command:
 
 **Syntax:**
 
@@ -108,10 +80,58 @@ DROP TABLE table_name;
 
 ```
 
-## Drop Database
+### Drop Database:
 
 **Syntax:**
 
 ```sql
 DROP DATABASE database_name;
 ```
+
+
+## DML (Data Manipulation Language)
+
+```sql
+-- 1. Insert a new row
+INSERT INTO table_name (column1, column2, column3)
+VALUES (value1, value2, value3);
+
+-- 2. Insert into all columns
+INSERT INTO table_name
+VALUES (value1, value2, value3);
+
+-- 3. Update existing row(s)
+UPDATE table_name
+SET column1 = value1,
+    column2 = value2
+WHERE condition;
+```
+
+## Query / DQL (Data Query Language)
+
+**Syntax:**
+
+```sql
+SELECT column1, column2, aggregate_function(...)
+FROM table1
+WHERE condition
+GROUP BY column
+HAVING condition
+ORDER BY column [ASC | DESC]
+LIMIT number OFFSET number;
+```
+**Clause Breakdown:**
+
+- ``SELECT`` → Choose which columns (or expressions) to display.
+
+- ``FROM`` → Table(s) from which data is retrieved.
+
+- ``WHERE`` → Filter rows before grouping/aggregation.
+
+- ``GROUP BY`` → Group rows (used with aggregate functions like COUNT, SUM, AVG).
+
+- ``HAVING`` → Filter groups (applied after GROUP BY).
+
+- ``ORDER BY`` → Sort the results.
+
+- ``LIMIT / OFFSET`` → Limit number of rows returned (pagination).
