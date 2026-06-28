@@ -1,4 +1,4 @@
-# MySQL-Lab
+# MySQL
 
 ## Hierarchical / Tree View :
 
