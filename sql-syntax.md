@@ -111,7 +111,7 @@ DELETE FROM table_name
 WHERE condition;
 ```
 
-## Query / DQL (Data Query Language)
+## DQL (Data Query Language)
 
 **Syntax:**
 
